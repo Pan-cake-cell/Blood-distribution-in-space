@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blood Volume &amp; Viscosity — Starfleet Medical</title>
+<link rel="stylesheet" href="trek.css"/>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="starfleet-badge">
+      <svg class="badge-emblem" viewBox="0 0 52 52" fill="none">
+        <circle cx="26" cy="26" r="24" stroke="#c9a84c" stroke-width="1.5"/>
+        <circle cx="26" cy="26" r="19" stroke="#1a6b9e" stroke-width="1"/>
+        <path d="M26 10 L30 20 L41 20 L33 26 L36 37 L26 31 L16 37 L19 26 L11 20 L22 20 Z" fill="#1a6b9e" opacity="0.6"/>
+        <circle cx="26" cy="26" r="4" fill="#4fb3e3" opacity="0.8"/>
+        <line x1="26" y1="2" x2="26" y2="10" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="26" y1="42" x2="26" y2="50" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="2" y1="26" x2="10" y2="26" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="42" y1="26" x2="50" y2="26" stroke="#c9a84c" stroke-width="1.5"/>
+      </svg>
+      <div class="badge-text">
+        <span>United Federation of Planets</span>
+        <span>Starfleet Medical</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div>STARDATE: 2401.47.3 &nbsp;|&nbsp; USS ENTERPRISE NCC-1701</div>
+      <div>MODULE 02 — BLOOD VOLUME &amp; VISCOSITY &nbsp;|&nbsp; <span class="status">● ACTIVE</span></div>
+    </div>
+  </div>
+  <div class="lcars-bar"></div>
+</header>
+
+<div class="back-bar">
+  <a href="index.html" class="back-link">Back to Research Modules</a>
+</div>
+
+<div class="page-hero">
+  <div class="hero-bg" style="background-image:url('img2.png');"></div>
+  <div class="hero-gradient"></div>
+  <div class="stars" id="stars"></div>
+  <div class="hero-content">
+    <div class="breadcrumb"><a href="index.html">Starfleet Medical</a> &nbsp;/&nbsp; <span>Blood Volume &amp; Viscosity</span></div>
+    <div class="page-module">Module 02 · Microgravity Medicine</div>
+    <h1 class="page-title">Blood Volume &amp; Viscosity</h1>
+  </div>
+</div>
+
+<main>
+
+  <div class="intro-block">
+    <div class="intro-label">Module Introduction</div>
+    <p>As we have seen before, in microgravity blood shifts upwards towards the head and neck due to the loss of the gravity pull. This increase in fluid pressure in the upper body vessels is sensed by the nervous system and the heart, which release key hormones to stimulate diuresis (increased urine), limit water retention in kidneys and reduce thirst (fluid intake). This leads to overall fluid loss and, in consequence, <strong>decreased blood volume</strong>. Loss of plasma volume means that the blood proteins and cells are more concentrated, leading to <strong>increased blood viscosity.</strong> However, normal viscosity levels are restored overtime due to the loss of red blood cells in microgravity.</p>
+  </div>
+
+  <div class="section-heading">Research Cards — Click to Reveal</div>
+
+  <div class="flip-grid">
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Question 01</div>
+            <div class="flip-front-num">01</div>
+          </div>
+          <div class="flip-front-q">How does the body sense changes in fluid pressure?</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Answer</div>
+          <div class="flip-back-text">The aorta and carotid arteries, which connect the heart to the head and upper body, have a specific set of mechanical sensing proteins known as baroreceptors. Baroreceptors are able to detect physical changes within the carotid vessels wall.
+
+In microgravity, increased blood flow to the head means that the carotid arteries wall is overstretched. This is sensed by the baroreceptors, which interpret that there is too much blood coming through the heart. Activated baroreceptors send signals through the nervous system to the rest of the body to lower blood fluid volume and overall decrease blood flow.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Question 02</div>
+            <div class="flip-front-num">02</div>
+          </div>
+          <div class="flip-front-q">How do baroreceptors communicate to the rest of the body to reduce blood volume?</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Answer</div>
+          <div class="flip-back-text">Baroreceptors are connected to the central nervous system through two specific nerves (glossopharangeal nerve and vagus nerve) which flow directly onto the spinal cord. They activate the parasympathetic nervous system, which causes the heart to relax and reduce heart rest and vasodilation. They also send signals to the kidneys, increasing renal blood flow and urine secretion.
+
+Baroreceptors in the heart can also trigger the release of the protein ANP (atrial natriuretic peptide), which acts: 1 — In the kidneys to decrease fluid and sodium reabsorption to promote urine and fluid secretion. 2 — In the brain, where it stops the thirst signals to reduce water intake. 3 — In the pituitary gland (endocrine system), to decrease the antidiuretic hormone (vasopressin, AVP), which normally stimulates fluid retention in kidneys, to drive increase urine secretion.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Independent section: So, how does it work? with img3 as background -->
+  <hr class="section-sep"/>
+
+  <div class="sub-heading">So, how does it <span>work?</span></div>
+
+  <div class="image-panel">
+    <img src="img3.png" alt="Blood volume and viscosity diagram"/>
+    <div class="image-panel-label">Diagram · Blood Volume &amp; Viscosity Regulation</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="left">Starfleet Medical · Blood Volume &amp; Viscosity · Module 02</div>
+  <div class="right">STARFLEET MEDICAL ✦ 2401</div>
+</footer>
+
+<script>
+  const c=document.getElementById('stars');
+  for(let i=0;i<45;i++){const s=document.createElement('span');s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;animation-delay:${Math.random()*3}s;animation-duration:${Math.random()*3+2}s`;c.appendChild(s);}
+</script>
+</body>
+</html>

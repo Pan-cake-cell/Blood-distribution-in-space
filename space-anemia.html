@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Space Anaemia — Starfleet Medical</title>
+<link rel="stylesheet" href="trek.css"/>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="starfleet-badge">
+      <svg class="badge-emblem" viewBox="0 0 52 52" fill="none">
+        <circle cx="26" cy="26" r="24" stroke="#c9a84c" stroke-width="1.5"/>
+        <circle cx="26" cy="26" r="19" stroke="#1a6b9e" stroke-width="1"/>
+        <path d="M26 10 L30 20 L41 20 L33 26 L36 37 L26 31 L16 37 L19 26 L11 20 L22 20 Z" fill="#1a6b9e" opacity="0.6"/>
+        <circle cx="26" cy="26" r="4" fill="#4fb3e3" opacity="0.8"/>
+        <line x1="26" y1="2" x2="26" y2="10" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="26" y1="42" x2="26" y2="50" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="2" y1="26" x2="10" y2="26" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="42" y1="26" x2="50" y2="26" stroke="#c9a84c" stroke-width="1.5"/>
+      </svg>
+      <div class="badge-text">
+        <span>United Federation of Planets</span>
+        <span>Starfleet Medical</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div>STARDATE: 2401.47.3 &nbsp;|&nbsp; USS ENTERPRISE NCC-1701</div>
+      <div>MODULE 03 — SPACE ANEMIA &nbsp;|&nbsp; <span class="status">● ACTIVE</span></div>
+    </div>
+  </div>
+  <div class="lcars-bar"></div>
+</header>
+
+<div class="back-bar">
+  <a href="index.html" class="back-link">Back to Research Modules</a>
+</div>
+
+<div class="page-hero">
+  <div class="hero-bg" style="background-image:url('img4.png');"></div>
+  <div class="hero-gradient"></div>
+  <div class="stars" id="stars"></div>
+  <div class="hero-content">
+    <div class="breadcrumb"><a href="index.html">Starfleet Medical</a> &nbsp;/&nbsp; <span>Space Anemia</span></div>
+    <div class="page-module">Module 03 · Microgravity Medicine</div>
+    <h1 class="page-title">Space Anemia</h1>
+  </div>
+</div>
+
+<main>
+
+  <div class="intro-block">
+    <div class="intro-label">Space Anemia: What Happens to Blood in Space?</div>
+    <p>When astronauts spend time in space, their bodies start to <strong>destroy red blood cells faster than normal.</strong> As a result, they can develop a condition called <strong>space anaemia</strong>.</p>
+  </div>
+
+  <div class="section-heading">Research Cards — Click to Reveal</div>
+
+  <div class="flip-grid">
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Card 01</div>
+            <div class="flip-front-num">01</div>
+          </div>
+          <div class="flip-front-q">Why red blood cells matter?</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Answer</div>
+          <div class="flip-back-text">Red blood cells carry oxygen around the body, helping our muscles and organs produce energy.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Card 02</div>
+            <div class="flip-front-num">02</div>
+          </div>
+          <div class="flip-front-q">What happens in space?</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Answer</div>
+          <div class="flip-back-text">🌍 On Earth: the body destroys about 2 million red blood cells per second.
+
+🌌 In space: this increases to ~3 million per second (54% more).
+
+⇒ After long missions, almost half of astronauts are anemic.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Card 03</div>
+            <div class="flip-front-num">03</div>
+          </div>
+          <div class="flip-front-q">Why astronauts don't feel it in space</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Answer</div>
+          <div class="flip-back-text">In <span class="def-trigger" data-def="A state where there is no feeling of body weight, because objects are in continuous free fall (as in orbit), causing everything to float.">weightlessness</span>, the body doesn't have to work against gravity. Because of this, having fewer red blood cells doesn't cause major problems while astronauts are in orbit.</div>
+          <div class="flip-back-close">HOVER "WEIGHTLESSNESS" · TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Card 04</div>
+            <div class="flip-front-num">04</div>
+          </div>
+          <div class="flip-front-q">What happens after landing?</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Answer</div>
+          <div class="flip-back-text">Back on Earth, the body must work against gravity again. With fewer red blood cells delivering oxygen, astronauts may feel tired, weak, and less physically strong.
+
+The good news: space anaemia is temporary. Blood levels return to normal within 3–4 months. Scientists think the body may use fat stored in bone marrow as energy to help produce new red blood cells faster.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Card 05</div>
+            <div class="flip-front-num">05</div>
+          </div>
+          <div class="flip-front-q">Why this matters?</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Answer</div>
+          <div class="flip-back-text">The longer the mission, the worse the anaemia, making it a key challenge for future missions to Mars.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="left">Starfleet Medical · Space Anemia · Module 03</div>
+  <div class="right">STARFLEET MEDICAL ✦ 2401</div>
+</footer>
+
+<script>
+  // Stars
+  const c=document.getElementById('stars');
+  for(let i=0;i<45;i++){const s=document.createElement('span');s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;animation-delay:${Math.random()*3}s;animation-duration:${Math.random()*3+2}s`;c.appendChild(s);}
+
+  // Floating definition tooltip — appended to <body> to escape any overflow:hidden parent
+  const popup = document.createElement('div');
+  popup.className = 'def-popup-float';
+  document.body.appendChild(popup);
+
+  let hideTimer = null;
+
+  document.querySelectorAll('.def-trigger').forEach(trigger => {
+    trigger.addEventListener('mouseenter', e => {
+      clearTimeout(hideTimer);
+      // Rebuild inner HTML each time so the ::before label always renders
+      popup.innerHTML = '<span class="def-popup-label">DEFINITION</span><span class="def-popup-body">' + trigger.dataset.def + '</span>';
+      popup.classList.add('visible');
+      positionPopup(e);
+    });
+
+    trigger.addEventListener('mousemove', positionPopup);
+
+    trigger.addEventListener('mouseleave', () => {
+      hideTimer = setTimeout(() => popup.classList.remove('visible'), 150);
+    });
+  });
+
+  function positionPopup(e) {
+    const pw = 320, ph = 130;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    let x = e.clientX + 16;
+    let y = e.clientY - 70;
+    if (x + pw > vw - 16) x = e.clientX - pw - 16;
+    if (y < 8) y = 8;
+    if (y + ph > vh - 8) y = vh - ph - 8;
+    popup.style.left = x + 'px';
+    popup.style.top  = y + 'px';
+  }
+</script>
+</body>
+</html>

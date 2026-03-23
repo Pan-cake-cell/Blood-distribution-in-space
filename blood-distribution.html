@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blood Distribution — Starfleet Medical</title>
+<link rel="stylesheet" href="trek.css"/>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="starfleet-badge">
+      <svg class="badge-emblem" viewBox="0 0 52 52" fill="none">
+        <circle cx="26" cy="26" r="24" stroke="#c9a84c" stroke-width="1.5"/>
+        <circle cx="26" cy="26" r="19" stroke="#1a6b9e" stroke-width="1"/>
+        <path d="M26 10 L30 20 L41 20 L33 26 L36 37 L26 31 L16 37 L19 26 L11 20 L22 20 Z" fill="#1a6b9e" opacity="0.6"/>
+        <circle cx="26" cy="26" r="4" fill="#4fb3e3" opacity="0.8"/>
+        <line x1="26" y1="2" x2="26" y2="10" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="26" y1="42" x2="26" y2="50" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="2" y1="26" x2="10" y2="26" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="42" y1="26" x2="50" y2="26" stroke="#c9a84c" stroke-width="1.5"/>
+      </svg>
+      <div class="badge-text">
+        <span>United Federation of Planets</span>
+        <span>Starfleet Medical</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div>STARDATE: 2401.47.3 &nbsp;|&nbsp; USS ENTERPRISE NCC-1701</div>
+      <div>MODULE 01 — BLOOD DISTRIBUTION &nbsp;|&nbsp; <span class="status">● ACTIVE</span></div>
+    </div>
+  </div>
+  <div class="lcars-bar"></div>
+</header>
+
+<div class="back-bar">
+  <a href="index.html" class="back-link">Back to Research Modules</a>
+</div>
+
+<div class="page-hero">
+  <div class="hero-bg" style="background-image:url('img1.jpeg');"></div>
+  <div class="hero-gradient"></div>
+  <div class="stars" id="stars"></div>
+  <div class="hero-content">
+    <div class="breadcrumb"><a href="index.html">Starfleet Medical</a> &nbsp;/&nbsp; <span>Blood Distribution</span></div>
+    <div class="page-module">Module 01 · Microgravity Medicine</div>
+    <h1 class="page-title">Blood Distribution</h1>
+  </div>
+</div>
+
+<main>
+
+  <div class="intro-block">
+    <div class="intro-label">Module Introduction</div>
+    <p>On Earth, gravity pulls blood toward the lower extremities, but in microgravity this force disappears, leading to a headward fluid shift. As a result, more blood and other bodily fluids move toward the chest, neck, and head, giving astronauts a "puffy face" appearance and reducing volume in the legs.</p>
+    <p>This redistribution triggers physiological responses:</p>
+  </div>
+
+  <div class="section-heading">Adaptive Response Cards — Click to Reveal</div>
+
+  <div class="flip-grid">
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Response #1</div>
+            <div class="flip-front-num">01</div>
+          </div>
+          <div class="flip-front-q">Volume Regulation Response</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Response Detail</div>
+          <div class="flip-back-text">the body interprets the increased central blood volume as excess fluid and reduces overall blood volume by increasing urine production.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Response #2</div>
+            <div class="flip-front-num">02</div>
+          </div>
+          <div class="flip-front-q">Cardiovascular Adaptation</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Response Detail</div>
+          <div class="flip-back-text">Over time, the cardiovascular system adapts, including changes in heart shape and function.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-front-label">Response #3</div>
+            <div class="flip-front-num">03</div>
+          </div>
+          <div class="flip-front-q">Return to Gravity Risk</div>
+          <div class="flip-front-hint">▶ TAP TO REVEAL</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-label">◀ Response Detail</div>
+          <div class="flip-back-text">Reduced ability to regulate blood pressure when returning to gravity.</div>
+          <div class="flip-back-close">TAP TO CLOSE ▶</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="left">Starfleet Medical · Blood Distribution · Module 01</div>
+  <div class="right">STARFLEET MEDICAL ✦ 2401</div>
+</footer>
+
+<script>
+  const c=document.getElementById('stars');
+  for(let i=0;i<45;i++){const s=document.createElement('span');s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;animation-delay:${Math.random()*3}s;animation-duration:${Math.random()*3+2}s`;c.appendChild(s);}
+</script>
+</body>
+</html>
