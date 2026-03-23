@@ -166,34 +166,89 @@ The good news: space anaemia is temporary. Blood levels return to normal within 
 </footer>
 
 <script>
-  // Stars
-  const c=document.getElementById('stars');
-  for(let i=0;i<45;i++){const s=document.createElement('span');s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;animation-delay:${Math.random()*3}s;animation-duration:${Math.random()*3+2}s`;c.appendChild(s);}
+  /* ── Stars ── */
+  const c = document.getElementById('stars');
+  for (let i = 0; i < 45; i++) {
+    const s = document.createElement('span');
+    s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;animation-delay:${Math.random()*3}s;animation-duration:${Math.random()*3+2}s`;
+    c.appendChild(s);
+  }
 
-  // Floating definition tooltip — appended to <body> to escape any overflow:hidden parent
+  /* ── Flip cards: tap-to-flip, but NOT when long-press is in progress ── */
+  document.querySelectorAll('.flip-card').forEach(card => {
+    card.removeAttribute('onclick');
+    card.addEventListener('click', e => {
+      if (card.dataset.suppressFlip === 'true') {
+        card.dataset.suppressFlip = 'false';
+        return;
+      }
+      card.classList.toggle('flipped');
+    });
+  });
+
+  /* ── Definition popup ── */
   const popup = document.createElement('div');
   popup.className = 'def-popup-float';
   document.body.appendChild(popup);
 
-  let hideTimer = null;
+  // Tap anywhere outside to dismiss
+  document.addEventListener('touchstart', e => {
+    if (popup.classList.contains('visible') && !popup.contains(e.target) && !e.target.classList.contains('def-trigger')) {
+      popup.classList.remove('visible');
+    }
+  }, { passive: true });
 
   document.querySelectorAll('.def-trigger').forEach(trigger => {
+    let pressTimer = null;
+    let longPressTriggered = false;
+
+    trigger.addEventListener('touchstart', e => {
+      longPressTriggered = false;
+      pressTimer = setTimeout(() => {
+        longPressTriggered = true;
+
+        const card = trigger.closest('.flip-card');
+        if (card) card.dataset.suppressFlip = 'true';
+
+        const rect = trigger.getBoundingClientRect();
+        const pw = Math.min(300, window.innerWidth - 32);
+        let x = rect.left;
+        if (x + pw > window.innerWidth - 16) x = window.innerWidth - pw - 16;
+        if (x < 8) x = 8;
+        const popupHeight = 130;
+        let y = rect.top - popupHeight - 10;
+        if (y < 8) y = rect.bottom + 10;
+
+        popup.style.left  = x + 'px';
+        popup.style.top   = y + 'px';
+        popup.style.width = pw + 'px';
+        popup.innerHTML   = '<span class="def-popup-label">DEFINITION</span><span class="def-popup-body">' + trigger.dataset.def + '</span>';
+        popup.classList.add('visible');
+
+        if (navigator.vibrate) navigator.vibrate(40);
+      }, 500);
+    }, { passive: true });
+
+    trigger.addEventListener('touchend', e => {
+      clearTimeout(pressTimer);
+      if (longPressTriggered) e.stopPropagation();
+    });
+
+    trigger.addEventListener('touchmove', () => clearTimeout(pressTimer), { passive: true });
+    trigger.addEventListener('touchcancel', () => clearTimeout(pressTimer));
+
+    // Mouse fallback for desktop
     trigger.addEventListener('mouseenter', e => {
-      clearTimeout(hideTimer);
-      // Rebuild inner HTML each time so the ::before label always renders
+      popup.style.width = '320px';
       popup.innerHTML = '<span class="def-popup-label">DEFINITION</span><span class="def-popup-body">' + trigger.dataset.def + '</span>';
       popup.classList.add('visible');
-      positionPopup(e);
+      movePopup(e);
     });
-
-    trigger.addEventListener('mousemove', positionPopup);
-
-    trigger.addEventListener('mouseleave', () => {
-      hideTimer = setTimeout(() => popup.classList.remove('visible'), 150);
-    });
+    trigger.addEventListener('mousemove', movePopup);
+    trigger.addEventListener('mouseleave', () => popup.classList.remove('visible'));
   });
 
-  function positionPopup(e) {
+  function movePopup(e) {
     const pw = 320, ph = 130;
     const vw = window.innerWidth, vh = window.innerHeight;
     let x = e.clientX + 16;
